@@ -1,0 +1,128 @@
+.blackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.66);
+}
+
+#modal {
+    position: fixed;
+    max-width: 500px;
+    min-width: 300px;
+    max-height: 800px;
+    background: var(--midground);
+    border: var(--highlight) solid 2px;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px #000;
+    text-align:center;
+    padding: 5px;
+    padding-bottom: 65px;
+    overflow: hidden;
+}
+
+.title {
+    background: var(--background);
+    margin: 5px auto;
+    padding: 8px;
+    max-width: 250px;
+    border: inherit solid 2px;
+}
+
+#modal-content {
+    background: inherit;
+    position: relative;
+    padding: 20px;
+    display: inline-block;
+    width: 90%;
+}
+
+input {
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    border: none;
+    background: var(--background);
+    color: white;
+    width: 100%;
+}
+
+#close-modal {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 10px;
+}
+
+#trash {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 10px;
+}
+
+#submit {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 0;
+    left: 50%;
+    width: 125px;
+    height: 35px;
+    border-radius: 25px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#submit p {
+    font-size: 20px;
+}
+
+#pocketbook {
+    position: relative;
+    top: 50px;
+}
+
+#qty-editors {
+    position: relative;
+    height: 50px;
+}
+
+#qty-editors > * {
+    display: inline-block;
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+}
+
+#qty-editors input {
+    left: 0;
+    margin: 0;
+    margin-right: 5px;
+    display: inline-block;
+
+    width: 110px;
+    height: 50px;
+}
+
+#qty-editors .div-button {
+    height: 50px;
+    width: 50px;
+    margin: 0;
+}
+
+#subtraction {
+    right: 0;
+}
+
+#addition {
+    right: 55px;
+}

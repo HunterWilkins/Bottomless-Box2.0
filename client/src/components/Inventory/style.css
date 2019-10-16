@@ -1,0 +1,119 @@
+#inventory, #item-box, #invbuttons, #items-list {
+    position: absolute;
+}
+
+#item-box, #invbuttons {
+    top: 0;
+    bottom: 0;
+}
+
+#inventory {
+    top: 83px;
+    bottom: 0;
+    width: 100vw;
+    background: var(--foreground);
+}
+
+#item-box {
+    left: 0;
+    right: 70px;
+    overflow-y: auto;
+}
+
+#item-box h2 {
+    padding: 5px;
+    width: 50%;
+}
+
+#items-list {
+    width: 100%;
+    top: 70px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+#pocket-total {
+    cursor: pointer;
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    right: 0;
+    background: var(--background);
+    width: 50%;
+    text-align:right;
+    border-bottom-left-radius: 10px;
+}
+
+.item {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: var(--background);
+    padding: 10px;
+    margin-bottom: 4px;
+    line-height: 1.25em;
+}
+
+.name, .value, .quantity, .item-total {
+    display: inline-block;
+    text-align:center;
+    border-right: var(--foreground) dashed 1px;
+    font-size: 16px;
+}
+
+.name {
+    width: 35%;
+    text-align:left;
+}
+
+.value {
+    width: 20%;
+}
+
+.quantity {
+    width: 15%;
+}
+
+.item-total {
+    width: 30%;
+    border:none;
+    text-align:right;
+}
+
+#invbuttons {
+    right: 0;
+    width: 70px;
+    text-align:center;
+    background: var(--background);
+}
+
+#invbuttons .div-button {
+    border: var(--button) solid 2px;
+}
+
+#invbuttons .div-button:hover {
+    border: var(--highlight) solid 2px;
+}
+
+@media only screen and (max-width: 400px) {
+
+    #item-box {
+        right: 0;
+        bottom: 70px;
+    }
+
+    #invbuttons {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 70px;
+        top: initial;
+    }
+
+    #invbuttons .div-button {
+        bottom: 0;
+        margin: 5px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+}

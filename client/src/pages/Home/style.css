@@ -1,0 +1,95 @@
+:root {
+    --foreground: rgb(37, 27, 27);
+    --midground: rgb(49, 32, 27);
+    --background: rgb(24, 13, 13);
+    --button: rgb(95, 70, 63);
+    --highlight: rgb(174, 142, 112);
+
+    --modalbuttons: rgb(49, 38, 35);
+}
+
+body {
+    color: rgb(255, 223, 194);
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+em {
+    font-style: italic;
+}
+
+.half-opacity {
+    background: inherit;
+    opacity: .50;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--highlight);
+}
+
+nav, section, #content {
+    position: fixed;
+    width: 100vw;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    height: 25px;
+    background: var(--foreground);
+}
+
+nav p {
+    width: 100%;
+    text-align:center;
+}
+
+.centered-XY {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.centered-Y {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+.div-button {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    background: var(--button);
+
+    transition: .15s, border-radius .35s, opacity .35s;
+}
+
+.div-button:hover {
+    border: var(--highlight) solid 2px;
+}
+
+.div-button p {
+    font-size: 30px;
+}
+
+#content {
+    position: fixed;
+    top: 25px;
+    bottom: 0;
+    background: darkgrey;
+}
