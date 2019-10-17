@@ -126,3 +126,39 @@ input {
 #addition {
     right: 55px;
 }
+
+@media only screen and (max-height: 400px) {
+    #modal {
+        max-height: initial;
+        height: 100%;
+    }
+
+    #modal-content {
+        padding: 5px;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 40%;
+        overflow-y:auto;
+    }
+
+    #submit {
+        transform: none;
+        padding: 0;
+        width: 80px;
+        right: 60px;
+    }
+
+    #shopping-cart-button {
+        position: absolute;
+        bottom: 0;
+        right: 160px;
+        width: 45px;
+        height: 45px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+}
