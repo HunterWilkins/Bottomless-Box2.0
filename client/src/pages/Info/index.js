@@ -75,7 +75,7 @@ class Home extends Component {
             <div>
                 <nav>
                     <Link to = "/" id = "homelink">⮈</Link>
-                    <h1 id = "info-title">Info</h1>    
+                    <h1 id = "info-title">Info</h1>
                 </nav>
 
                 <div id = "info-wrapper">

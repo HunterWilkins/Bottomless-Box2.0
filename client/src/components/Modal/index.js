@@ -104,6 +104,7 @@ function Modal(props) {
                 </div>
             }
 
+            
             <div className = "div-button"  id = "close-modal" onClick = {() => {props.toggleModal()}}>
                 <p className = "centered-XY">x</p>
             </div>
