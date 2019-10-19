@@ -81,6 +81,7 @@ body {
     }
 
     #questions, #answer {
+        overflow-y: scroll;
         width: 100vw;
     }
 
