@@ -128,7 +128,7 @@
     #item-box {
         border-top: var(--button) solid 2px;
         position: fixed;
-        top: 25px;
+        top: 40px;
         left: 60px;
         right: 50px;
         bottom: 0px;
