@@ -81,7 +81,6 @@ body {
     }
 
     #questions, #answer {
-        overflow-y: scroll;
         width: 100vw;
     }
 
@@ -90,7 +89,7 @@ body {
         bottom:0;
         height: 200px;
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: scroll;
         white-space: nowrap;
     }
 
