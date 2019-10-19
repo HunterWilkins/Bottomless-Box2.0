@@ -72,8 +72,12 @@ body {
 
 @media only screen and (max-width: 400px) {
 
+    #info-nav {
+        height: 40px;
+    }
+
     #homelink {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     #info-wrapper {

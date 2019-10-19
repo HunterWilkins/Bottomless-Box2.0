@@ -73,7 +73,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <nav>
+                <nav id = "info-nav">
                     <Link to = "/" id = "homelink">←</Link>
                     <h1 id = "info-title">Info</h1>
                 </nav>
