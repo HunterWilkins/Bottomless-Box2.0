@@ -83,7 +83,9 @@ class Home extends Component {
                         {
                             this.questions.map(item => {
                                 return(
-                                    <p className = "question" style = { this.state.question === item.q ? this.activeStyle : {}} onClick = {() => {this.ask(item.q)}}>{item.q}</p>
+                                    <div className = "question" style = { this.state.question === item.q ? this.activeStyle : {}} onClick = {() => {this.ask(item.q)}}>
+                                        <p>{item.q}</p>
+                                    </div>
                                 );
                             })
                         }
