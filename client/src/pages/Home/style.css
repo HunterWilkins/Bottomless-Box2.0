@@ -95,3 +95,11 @@ nav p {
     background: darkgrey;
 }
 
+@media only screen and (max-height: 400px) {
+    nav {
+        left: 60px;
+        right: 50px;
+        width:initial;
+    }
+}
+
