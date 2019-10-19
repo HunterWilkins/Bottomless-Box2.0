@@ -104,6 +104,8 @@ body {
         display: inline-block;
         margin-right: 5px;
         margin-bottom: 5px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
     }
 
     .question p {
