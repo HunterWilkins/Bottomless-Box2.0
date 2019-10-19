@@ -61,6 +61,10 @@ body {
     background: var(--button);
 }
 
+.question p {
+    white-space: normal;
+}
+
 .question:hover {
     text-shadow: 0 2px 2px var(--background);
     color: rgb(255, 222, 151);
@@ -95,10 +99,14 @@ body {
         width: 150px;
         height: 200px;
         overflow-y: hidden;
-        overflow-x: hidden;
         display: inline-block;
         margin-right: 5px;
         margin-bottom: 5px;
+    }
+
+    .question p {
+        width: 100%;
+        height: 100%;
     }
 
     #answer {
