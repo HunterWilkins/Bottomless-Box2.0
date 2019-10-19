@@ -90,7 +90,6 @@ body {
     }
 
     .question {
-        position:absolute;
         top: 0;
         text-align:center;
         width: 150px;
@@ -98,7 +97,6 @@ body {
         overflow-y: hidden;
         overflow-x: hidden;
         display: inline-block;
-        white-space: pre-wrap;
         margin-right: 5px;
         margin-bottom: 5px;
     }
