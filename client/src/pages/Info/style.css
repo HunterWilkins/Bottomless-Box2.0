@@ -94,7 +94,8 @@ body {
     }
 
     .question {
-        top: 0;
+        transform: translateY(-50%);
+        top: 50%;
         text-align:center;
         width: 150px;
         height: 200px;
