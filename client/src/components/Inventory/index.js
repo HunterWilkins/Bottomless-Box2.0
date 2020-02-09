@@ -52,7 +52,7 @@ function Inventory(props) {
 
             <div id = "item-box">
                 <h2>{props.pockets.indexOf(props.pocket) === -1 ? "All" : props.pocket}</h2>
-                <p id = "pocket-total" onClick = {() => {props.toggleModal(null, "tax")}}><span className = "half-opacity">$ </span>{ props.tax ? `${pocketTotal.toFixed(2)} 🠚 ${taxedTotal.toFixed(2)}` : pocketTotal.toFixed(2)}</p>
+                <p id = "pocket-total" onClick = {() => {props.toggleModal(null, "tax")}}><span className = "half-opacity">$ </span>{ props.tax ? `${pocketTotal.toFixed(2)} → ${taxedTotal.toFixed(2)}` : pocketTotal.toFixed(2)}</p>
                 <div className = "item half-opacity">
                     <em>
                         <p className = "name">Name</p>

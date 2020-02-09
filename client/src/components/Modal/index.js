@@ -46,7 +46,7 @@ function Modal(props) {
         <div className = "blackground" style = {style}>
 
 
-        <div id = "modal" className = "centered-XY" style = {style}>
+        <div style = {style} id = "modal" className = "centered-XY" >
 
             { props.modalType === "pocketbook" ? <h3 className = "title">Create New Pocket</h3> :
                 <h3 className = "title">{modalTitle}</h3>
@@ -104,6 +104,7 @@ function Modal(props) {
                 </div>
             }
 
+            
             <div className = "div-button"  id = "close-modal" onClick = {() => {props.toggleModal()}}>
                 <p className = "centered-XY">x</p>
             </div>
@@ -122,7 +123,7 @@ function Modal(props) {
             }
             
             {props.modalType !== "tax" && props.modalType !== "pocketbook" ?
-            <div className = "div-button" style = {shoppingButton} onClick = {() => {props.setShoppingItem()}}>
+            <div className = "div-button" id = "shopping-cart-button" style = {shoppingButton} onClick = {() => {props.setShoppingItem()}}>
                 <p className = "centered-XY"><span role = "img" aria-label = "shopping cart">🛒</span></p>
             </div>
             :

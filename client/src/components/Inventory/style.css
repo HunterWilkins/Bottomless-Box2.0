@@ -95,7 +95,7 @@
     border: var(--highlight) solid 2px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) and (min-height: 401px) {
 
     #item-box {
         right: 0;
@@ -115,5 +115,36 @@
         margin: 5px;
         border-top-right-radius: 25px;
         border-top-left-radius: 25px;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+
+    #inventory {
+        top: 0;
+        left: 60px;
+    }
+
+    #item-box {
+        border-top: var(--button) solid 2px;
+        position: fixed;
+        top: 25px;
+        left: 60px;
+        right: 50px;
+        bottom: 0px;
+    }
+
+    #invbuttons {
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow-y: auto;
+        width: 50px;
+        bottom: 0;
+    }
+
+    #invbuttons .div-button {
+        width: 45px;
+        height: 45px;
     }
 }

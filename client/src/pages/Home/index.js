@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Navbar from "../../components/Navbar";
 import Dashboard from "../../components/Dashboard";
 import Inventory from "../../components/Inventory";
 import Modal from "../../components/Modal";
@@ -23,7 +24,9 @@ class Home extends Component {
         modalType: null,
 
         shoppingMode: false,
-        tax: localStorage.getItem("tax") ? JSON.parse(localStorage.getItem("tax")) : null
+        tax: localStorage.getItem("tax") ? JSON.parse(localStorage.getItem("tax")) : null,
+
+        accountDisplay: false
     }
 
     localItems = localStorage.getItem("inventory") ? JSON.parse(localStorage.getItem("inventory")) : [];
@@ -198,6 +201,12 @@ class Home extends Component {
         // }
     }
 
+    toggleAccountDisplay = () => {
+        this.setState({
+            accountDisplay: !this.state.accountDisplay
+        })
+    }
+
     handleInputChange = (event) => {
         this.setState({
             [event.target.name] : event.target.value
@@ -207,10 +216,11 @@ class Home extends Component {
     render() {
         return (
             <div>
+
                 <nav>
                     <p className = "centered-XY">The Bottomless Box</p>
                 </nav>
-
+                
                 <div id = "content">
                     <Dashboard 
                         pocket = {this.state.pocket}

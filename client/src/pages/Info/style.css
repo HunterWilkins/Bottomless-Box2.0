@@ -54,10 +54,15 @@ body {
 }
 
 .question {
+    position: relative;
     cursor: pointer;
     padding: 10px;
     margin-bottom: 5px;
     background: var(--button);
+}
+
+.question p {
+    white-space: normal;
 }
 
 .question:hover {
@@ -67,8 +72,12 @@ body {
 
 @media only screen and (max-width: 400px) {
 
+    #info-nav {
+        height: 40px;
+    }
+
     #homelink {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     #info-wrapper {
@@ -80,24 +89,32 @@ body {
     }
 
     #questions {
+        position: fixed;
         top: initial;
         bottom:0;
         height: 200px;
-        overflow-x: auto;
+        overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
     }
 
     .question {
-        text-align:center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
         width: 150px;
-        height: 100%;
+        height: 200px;
         overflow-y: hidden;
-        overflow-x: hidden;
         display: inline-block;
-        white-space: pre-wrap;
         margin-right: 5px;
         margin-bottom: 5px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .question p {
+        width: 100%;
+        height: 100%;
     }
 
     #answer {
