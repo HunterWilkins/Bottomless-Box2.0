@@ -18,7 +18,7 @@ function Inventory(props) {
     console.log(filteredInv);
 
     filteredInv.forEach(item => {
-        let itemTotal = parseFloat(item.value) * parseInt(item.quantity);
+        let itemTotal = parseFloat(item.value) * parseFloat(item.quantity);
 
         console.log(item.type);
 
@@ -70,8 +70,8 @@ function Inventory(props) {
                             <div className = "item" onClick = {() => {props.toggleModal(item, "edit")}}>
                                 <p className = "name">{item.name}</p>
                                 <p className = "value"><span className = "half-opacity">$ </span>{parseFloat(item.value).toFixed(2)}</p>
-                                <p className = "quantity">{parseInt(item.quantity)}</p>
-                                <p className = "item-total"><span className = "half-opacity">$ </span>{(parseInt(item.quantity) * parseFloat(item.value)).toFixed(2)}</p>
+                                <p className = "quantity">{parseFloat(item.quantity)}</p>
+                                <p className = "item-total"><span className = "half-opacity">$ </span>{(parseFloat(item.quantity).toFixed(2) * parseFloat(item.value)).toFixed(2)}</p>
                             </div>
                         );
                     })

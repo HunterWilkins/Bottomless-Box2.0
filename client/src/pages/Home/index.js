@@ -60,7 +60,7 @@ class Home extends Component {
                 {
                     name: this.state.name,
                     value: parseFloat(this.state.value).toFixed(2),
-                    quantity: parseInt(this.state.quantity),
+                    quantity: parseFloat(this.state.quantity),
                     type: this.state.pocket,
                     id: id,
                     shoppingItem: this.state.shoppingItem             
@@ -78,7 +78,7 @@ class Home extends Component {
             if (item.id === this.state.id) {
                 item.name = this.state.name;
                 item.value = parseFloat(this.state.value).toFixed(2);
-                item.quantity = parseInt(this.state.quantity);
+                item.quantity = parseFloat(this.state.quantity).toFixed(2);
                 item.id = this.state.id;
                 item.shoppingItem = this.state.shoppingItem
             }
@@ -157,13 +157,13 @@ class Home extends Component {
         switch(method) {
             case "add":
                 this.setState({
-                    quantity: (parseInt(this.state.quantity) + 1)
+                    quantity: (parseFloat(this.state.quantity) + 1)
                 });
                 break;
             case "sub":
                 if (this.state.quantity >= 1) {
                     this.setState({
-                        quantity: (parseInt(this.state.quantity) - 1)
+                        quantity: (parseFloat(this.state.quantity) - 1)
                     });    
                 }
                 break;
@@ -191,7 +191,7 @@ class Home extends Component {
             modalType: type,
             name: item ? item.name : null,
             value: item ? parseFloat(item.value).toFixed(2) : null,
-            quantity: item ? parseInt(item.quantity) : null,
+            quantity: item ? parseFloat(item.quantity).toFixed(2) : null,
             id: item ? item.id : null,
             shoppingItem: this.state.shoppingMode
         });
