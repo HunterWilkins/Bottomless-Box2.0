@@ -6,6 +6,8 @@ function Inventory(props) {
 
     let filteredInv;
     let pocketTotal = 0;
+    let taxableTotal = 0;
+    let untaxables = 0;
     
     let shoppingButton = props.shoppingMode ? {border: "red solid 2px", "border-radius": "50px", "background" : "var(--background)"} : {}
 
@@ -13,13 +15,27 @@ function Inventory(props) {
 
     //props.pocket === "All" || null ? props.inventory : filteredInv = props.inventory.filter(item => item.type === props.pocket);
 
+    console.log(filteredInv);
+
     filteredInv.forEach(item => {
         let itemTotal = parseFloat(item.value) * parseInt(item.quantity);
+
+        console.log(item.type);
+
+        if (item.type === "Misc" || item.type === "Pet Supplies" || item.type === "Medicine") {
+            taxableTotal += itemTotal;
+        }
+        else {
+            untaxables += itemTotal;
+        }
+
+        console.log(taxableTotal);
+        console.log(untaxables);
 
         pocketTotal += itemTotal;
     });
 
-    let taxedTotal = ( 1 + (props.tax / 100)) * pocketTotal;
+    let taxedTotal = (( 1 + (props.tax / 100)) * taxableTotal) + untaxables;
 
     function filterInventory(item) {
         if (props.pocket === "All" && item.shoppingItem === props.shoppingMode) {

@@ -18,6 +18,7 @@
   "dependencies": {
     "concurrently": "^5.0.0",
     "express": "^4.17.1",
+    "mongoose": "^5.7.10",
     "node": "^12.11.1",
     "nodemon": "^1.19.3",
     "react": "^16.10.2",
