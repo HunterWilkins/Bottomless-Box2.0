@@ -77,7 +77,7 @@ function Modal(props) {
                         </div>
                     </div>
                     :
-                    <input   onBlur = {props.handleInputChange} type = "number" name = "quantity" placeholder = {props.quantity !== null ? props.quantity : "Quantity"}></input>
+                    <input   onBlur = {props.handleInputChange} type = "number" name = "quantity" placeholder = {props.quantity !== null ? props.quantity : "Quantity (# or lbs)"}></input>
 
                     }
                     </div>
